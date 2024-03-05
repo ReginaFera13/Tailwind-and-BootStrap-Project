@@ -42,7 +42,20 @@ function Home() {
                 </Form>
                 <div id='result'>
                   {pokemon.map((poke, i) => 
-                    <pokeCard />
+                    <pokeCard 
+                      key={i}
+                      abilityA={poke.abilities[0].ability.name}
+                      abilityB={poke.abilities[1].ability.name}
+                      exp={poke.base_experience}
+                      name={poke.name}
+                      sprite={poke.sprites.front_default}
+                      hp={poke.stats[0].base_stat}
+                      attack={poke.stats[1].base_stat}
+                      defense={poke.stats[2].base_stat}
+                      specialAttack={poke.stats[3].base_stat}
+                      specialDefense={poke.stats[4].base_stat}
+                      speed={poke.stats[5].base_stat}
+                    />
                   )}
                 </div>
             </Stack>

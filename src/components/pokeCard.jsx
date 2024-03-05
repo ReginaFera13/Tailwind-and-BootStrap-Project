@@ -1,4 +1,4 @@
-function pokeCard() {
+function pokeCard({key, abilityA, abilityB, exp}) {
 
     return (
       <>
